@@ -19,7 +19,6 @@ function getWordFile(){
         if (request.status == 200) {
 		// get contents of the word file
                 var contents = request.responseText;
-		console.log(contents);
 		// read it line by line and store it in word_list
 		word_list = contents.split("\n");
 		console.log(word_list);
