@@ -21,7 +21,7 @@ function getWordFile(){
                 var contents = request.responseText;
 		// read it line by line and store it in word_list
 		word_list = contents.split("\n");
-		console.log(word_list);
+		document.getElementById("num_of_letters").focus();
         }
     }
 }
