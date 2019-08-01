@@ -7,17 +7,17 @@
     <h1>Word Jumble!</h1>
     <b>How many letters?</b>
     <br/>
-    <input type="number" name="num_of_letters" min="3" max="10"/>
+    <input id="num_of_letters" type="number" name="num_of_letters" min="3" max="10"/>
     <br/><br/>
-    <button>Play!</button>
+    <button onclick="play()">Play!</button>
     <br/><br/>
     <div id="message" style="color:red">
     </div>
     <div id="jumbled_word" style="color:black; font-size:24px; font-weight:bold; text-transform:uppercase">
     </div>
-    <input type="text">
+    <input type="text" style="display:none">
     <br/><br/>
-    <button>Submit</button>
+    <button style="display:none">Submit</button>
   </center>
 </body>
 </html>
