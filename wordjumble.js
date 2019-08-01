@@ -14,13 +14,11 @@ function getWordFile(){
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
-            var type = request.getResponseHeader('Content-Type');
-            if (type.indexOf("text") !== 1) {
 		// get contents of the word file
                 var contents = request.responseText;
 		// read it line by line and store it in word_list
 		word_list = contents.split("\n");
-            }
+		console.log(word_list);
         }
     }
 }
@@ -47,6 +45,7 @@ function jumbleWord(word) {
 
 function play() {
   num_of_letters = parseInt(document.getElementById("num_of_letters").value);
+  console.log("NUM OF LETTERS: " + num_of_letters);
   original_word = pickWord();
   while (original_word.length != num_of_letters) {
     original_word = pickWord();
