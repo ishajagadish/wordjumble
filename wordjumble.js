@@ -80,7 +80,7 @@ function submit() {
   if (user_input.toLowerCase() === original_word.toLowerCase()) {
     document.getElementById("message").innerHTML = "You got it!";    
   } else {
-    document.getElementById("message").innerHTML = "Sorry! The correct answer is: " + original_word + ".";
+    document.getElementById("message").innerHTML = "Sorry! The correct answer is: " + original_word.toUpperCase() + ".";
   }
 }
 
