@@ -1,3 +1,11 @@
+// program
+var num_of_letters = 0;
+var num_of_words = 0;
+var original_word = "";
+var jumbled_word = "";
+var user_input = "";
+var word_list = [""];
+
 // functions
 function getWordFile(){
     // read file from URL location
@@ -8,7 +16,10 @@ function getWordFile(){
         if (request.readyState === 4 && request.status === 200) {
             var type = request.getResponseHeader('Content-Type');
             if (type.indexOf("text") !== 1) {
-                return request.responseText;
+		// get contents of the word file
+                var contents = request.responseText;
+		// read it line by line and store it in word_list
+		word_list = contents.split("\n");
             }
         }
     }
@@ -59,15 +70,4 @@ function submit() {
   }
 }
 
-// program
-var num_of_letters = 0;
-var num_of_words = 0;
-var original_word = "";
-var jumbled_word = "";
-var user_input = "";
 
-// get contents of the word file
-var contents = getWordFile();
-
-// read it line by line and store it in word_list
-var word_list = contents.split("\n");
