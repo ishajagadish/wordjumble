@@ -11,9 +11,9 @@ function getWordFile(){
     // read file from URL location
     var request = new XMLHttpRequest();
     request.open('GET', 'https://ishajagadish.github.io/wordjumble/words.txt', true);
-    request.send(null);
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
+    request.send();
+    request.onload = function () {
+        if (request.status == 200) {
 		// get contents of the word file
                 var contents = request.responseText;
 		console.log(contents);
