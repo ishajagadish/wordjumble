@@ -46,7 +46,7 @@ function jumbleWord(word) {
 }
 
 function play() {
-  num_of_letters = document.getElementById("num_of_letters").value.parseInt();
+  num_of_letters = parseInt(document.getElementById("num_of_letters").value);
   original_word = pickWord();
   while (original_word.length != num_of_letters) {
     original_word = pickWord();
