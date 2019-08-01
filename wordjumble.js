@@ -10,12 +10,13 @@ var word_list = [""];
 function getWordFile(){
     // read file from URL location
     var request = new XMLHttpRequest();
-    request.open('GET', 'words.txt', true);
+    request.open('GET', 'https://ishajagadish.github.io/wordjumble/words.txt', true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
 		// get contents of the word file
                 var contents = request.responseText;
+		console.log(contents);
 		// read it line by line and store it in word_list
 		word_list = contents.split("\n");
 		console.log(word_list);
