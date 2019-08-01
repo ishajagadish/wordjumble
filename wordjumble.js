@@ -65,7 +65,7 @@ function play() {
 
 function submit() {
   user_input = document.getElementById("user_input").value;
-  if (user_input === original_word) {
+  if (user_input.toLowerCase() === original_word.toLowerCase()) {
     document.getElementById("message").innerHTML = "You got it!";    
   } else {
     document.getElementById("message").innerHTML = "Sorry! The correct answer is: " + original_word + ".";
