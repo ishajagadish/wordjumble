@@ -6,6 +6,9 @@ var jumbled_word = "";
 var user_input = "";
 var word_list = [""];
 
+// initial setup
+getWordFile();
+
 // functions
 function getWordFile(){
     // read file from URL location
