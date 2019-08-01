@@ -1,26 +1,27 @@
 <html>
 <head>
-<title>Word Jumble</title>
+<title>Isha's Word Jumble</title>
 <link rel="stylesheet" type="text/css" href="wordjumble.css"/>
 <script type="text/javascript" src="wordjumble.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <center>
-    <h1>Word Jumble!</h1>
+    <h1>Isha's Word Jumble!</h1>
     <b>How many letters?</b>
     <br/>
-    <input id="num_of_letters" type="number" name="num_of_letters" min="3" max="10" tabindex="-1"/>
-    <br/><br/>
+    <input id="num_of_letters" type="number" name="num_of_letters" size="3" value="4" min="3" max="10" tabindex="-1"/>
+    <br/>
     <button onclick="play()">Play!</button>
+    <br/><br/>
+    <div id="jumbled_word" style="color:black; font-size:24px; font-weight:bold; text-transform:uppercase; letter-spacing:2px;">
+    </div>
+    <input id="user_input" name="user_input" type="text" style="display:none" tabindex="-1">
+    <br/>
+    <button id="submit" onclick="submit()" style="display:none">Check!</button>
     <br/><br/>
     <div id="message" style="color:red">
     </div>
-    <div id="jumbled_word" style="color:black; font-size:24px; font-weight:bold; text-transform:uppercase">
-    </div>
-    <input id="user_input" name="user_input" type="text" style="display:none" tabindex="-1">
-    <br/><br/>
-    <button id="submit" onclick="submit()" style="display:none">Submit</button>
   </center>
 </body>
 </html>
