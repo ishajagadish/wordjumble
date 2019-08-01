@@ -63,6 +63,16 @@ function play() {
   document.getElementById("user_input").style.display = "block";
   document.getElementById("user_input").focus();
   document.getElementById("submit").style.display = "block";
+  // Simulate clicking submit button when the user releases a key on the keyboard
+  document.getElementById("user_input").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("submit").click();
+    }
+  }); 
 }
 
 function submit() {
