@@ -59,8 +59,8 @@ function play() {
   }
   document.getElementById("jumbled_word").innerHTML = jumbled_word;
   document.getElementById("message").innerHTML = "Here is the jumbled word. Go!";
-  document.getElementById("user_input").style.visibility = "visible";
-  document.getElementById("submit").style.visibility = "visible";
+  document.getElementById("user_input").style.display = "block";
+  document.getElementById("submit").style.display = "block";
 }
 
 function submit() {
